@@ -1,3 +1,17 @@
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Roboto Condensed'), local('RobotoCondensed-Regular'), url(https://fonts.gstatic.com/s/robotocondensed/v18/ieVl2ZhZI2eCN5jzbjEETS9weq8-19K7CA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4mxP.ttf) format('truetype');
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -135,6 +149,15 @@ html {
 }
 body {
   text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Roboto Condensed', sans-serif;
 }
 .container {
   width: 100%;
@@ -164,10 +187,10 @@ body {
   background-color: #191414;
   border-radius: 50px;
   align-items: flex-end;
-  width: 30%;
-  height: 55vh;
-  padding: 5%;
-  margin-right: 2%;
+  width: 28%;
+  height: 45vh;
+  padding: 3%;
+  margin-right: 10%;
 }
 .top-section .heroContainer div h1 {
   font-size: 3rem;
@@ -185,8 +208,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 60%;
-  height: 8vh;
+  width: 55%;
+  height: 7vh;
   border-radius: 50px;
   background-color: #1DB954;
 }
@@ -194,6 +217,21 @@ body {
   color: white;
   text-decoration: none;
   font-size: 2.5rem;
+}
+.bottom-section {
+  display: flex;
+  justify-content: space-between;
+  height: 100vh;
+  width: 100%;
+  padding-top: 3%;
+}
+.bottom-section .firstDiv {
+  width: 49%;
+  border-right: 1px solid #1DB954;
+}
+.bottom-section .secondDiv {
+  width: 49%;
+  border-left: 1px solid #1DB954;
 }
 .header {
   display: flex;
@@ -216,10 +254,11 @@ body {
 }
 footer {
   display: flex;
-  height: 30vh;
+  height: 20vh;
   justify-content: center;
   align-items: center;
 }
 footer p {
   color: white;
+  font-size: 1.5rem;
 }
