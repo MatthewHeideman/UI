@@ -1,0 +1,89 @@
+.peopleSection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 7vw;
+    width: 100%;
+    color: white;
+    div {
+        width: 25vw;
+        margin-bottom: 2vw;
+        h2 {
+            font-size: 2vw;
+            margin: 1% 0%;
+            line-height: 150%;
+            color: #1DB954;
+            @media @tablet {
+                font-size: 3vw;
+            }
+            @media @medium {
+                font-size: 6vw;
+            }
+        }
+        p {
+            margin-top: -2%;
+            margin-bottom: 5%;
+            font-size: 2vw;
+            // line-height: 250%;
+            @media @tablet {
+                font-size: 3vw;
+            }
+            @media @medium {
+                font-size: 6vw;
+            }
+        }
+        @media @tablet {
+            width: 45vw;
+        }
+        @media @mobile {
+            width: 75vw;
+        }
+    }
+    .imageContainer {
+        width: 35%;
+        margin: auto;
+        box-shadow: -.8vw 1.1vw lightgray;
+        margin-bottom: 6%;
+        img {
+            box-shadow: -.5vw .7vw black;
+            border: 1px solid white;
+            @media @medium {
+                box-shadow: -.8vw 1.1vw black;
+            }
+        }
+        @media @medium {
+            width: 50%;
+        }
+        @media @medium {
+            box-shadow: -1.3vw 1.8vw lightgray;
+        }
+    }
+    @media @tablet {
+        margin-top: 15%;
+    }
+    @media @medium {
+        width: 99%;
+        margin: 0 auto;
+        margin-top: 20vw;
+    }
+}
+.outroDiv {
+    width: 90vw;
+    height: auto;
+    margin: 0 auto;
+    box-shadow: -1.5vw 2.3vw lightgreen;
+    .outro {
+        color: white;
+        margin: 0 auto;
+        width: 90vw;
+        font-size: 2.5vw;
+        background: black;
+        border: .1vw solid white;
+        padding: 1.5vw;
+        box-shadow: -.7vw 1vw #1DB954;
+        @media @medium {
+            font-size: 5vw;
+            padding: 5vw;
+        }
+    }
+}
