@@ -8,51 +8,75 @@
         background-position: center; 
         background-repeat: no-repeat; 
         background-size: cover; 
-        height: 80vh;
+        height: 100vh;
         display: flex;
         flex-direction: column;
-        align-items: flex-end;
+        align-items: center;
         justify-content: center;
+        border-bottom: 10px solid #080808;
         div{
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
-            background-color: #191414;
-            border-radius:50px;
-            align-items: flex-end;
-            width: 25%;
-            height: 45vh;
+            justify-content: center;
+            // background-color: ;
+            // border-radius:50px;
+            align-items: center;
+            height: 100%;
             padding: 3%;
-            margin-right: 10%;
+            // margin-right: 10%;
             h1{
-                font-size: 3rem;
-                color: #1DB954;
-                align-self: center;
-            }
-            p{
-                font-size: 1.5rem;
-                width: 90%;
-                text-align: justify;
-                color: white;
-                align-self: center;
-
-            }
-           
-            btn{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 55%;
-                height: 7vh;
-                border-radius: 50px;
-                background-color: #1DB954;
-                margin-right: 1%;
-                a{
-                    color: white;
-                    text-decoration: none;
-                    font-size: 2.5rem;
+                font-size: 5vw;
+                @media @big {
+                    font-size: 6vw;
+                }
+                @media @tablet {
+                    font-size: 7vw;
+                }
+                @media @medium {
+                    font-size: 10vw;
+                    margin-bottom: 3.5%;
                 }
             }
+            h2 {
+                font-size: 2.5vw;    
+                @media @big {
+                    font-size: 3.2vw;
+                }
+                @media @tablet {
+                    font-size: 4vw;
+                }
+                @media @medium {
+                    font-size: 6vw;
+                    margin: 2%;
+                    margin-bottom: 5%;
+                }
+            }
+            // p{
+            //     font-size: 1.5rem;
+            //     width: 90%;
+            //     text-align: justify;
+            //     color: white;
+             // }
+            button {
+                .customButton(@bg-color: #1DB954; @width: 17vw; @font-color: white);
+                height: 6.5vh;
+                font-size: 1.3vw;
+                border-radius: 50px;
+                   @media @big {
+                       font-size: 1.6vw;
+                       width: 22vw;
+                   }
+                   @media @tablet {
+                       font-size: 1.9vw;
+                       width: 28vw;
+                       height: 6vh;
+                   }
+                   @media @medium {
+                       height: 6vh;
+                       font-size: 3.3vw;
+                       width: 45vw;
+                   }      
+               }
         }
     }
    
@@ -64,37 +88,404 @@
         
     // }
     
+    }
+span {
+    font-size: inherit;
+    display: inline;
+    margin-left: -1%;
+    @media @medium {
+        display: none;
+    }
 }
-.bottom-section{
-    display: flex;
-    justify-content: space-between;
-    height: 100vh;
-    width: 100%;
-    padding-top: 3%;
-    padding-right: 1%;
-    padding-left: 1%;
-    .firstDiv{
-        padding-top: 1%;
-        width: 49%;
-        border-right: 1px solid #1DB954;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        div{
-            width: 35%;
-            height: 4vw;
-            background-color: #1DB954;
-            border-radius: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            h2{
-                font-size: 2rem;
-            }
+.wrapper {
+    min-height: 100%;
+}
+.introQuote {
+    color: #1DB954;
+    margin: 4.5%;
+    margin-bottom: 10%;
+    h1 {
+        font-size: 2.6vw;
+        margin-bottom: .7%;
+        @media @big {
+            font-size: 3.5vw;
+            margin-bottom: 1.2%;
+        }
+        @media @tablet {
+            font-size: 4vw;
+        }
+        @media @medium {
+            font-size: 6vw;
         }
     }
-    .secondDiv{
-        width: 49%;
-        border-left: 1px solid #1DB954;
+    h2{
+        font-size: 1.1vw;
+        color: white;
+        @media @big {
+            font-size: 1.7vw;
+        }
+        @media @tablet {
+            font-size: 1.9vw;
+        }
+        @media @medium {
+            visibility: hidden;
+        }
+    }
+    @media @medium {
+        margin: 5%;
+        margin-bottom: 13%;
+    }
+}//closes .introQuote
+.firstSlide {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: #1DB954;
+    background: #191414;
+    margin: 5% auto;
+    .firstSlideImg {
+        width: 40vw;
+        padding: 0%;
+        box-shadow: 1.2vw 1.9vw lightgreen;
+        img {
+            box-shadow: .7vw .9vw #1DB954;
+            @media @medium {
+                box-shadow: 1.6vw 1.9vw #1DB954;
+            }
+        }
+        @media @medium {
+            width: 70vw;
+            margin-bottom: 5%;
+            box-shadow: 3vw 4vw lightgreen;
+        }
+    }//closes .firstSlideImg
+    div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        margin-left: -5%;
+        line-height: 5vw;
+        height: 50%;
+        padding: 2.5%;
+        h2 {
+            font-size: 3.5vw;
+            @media @big {
+                font-size: 3.9vw;
+            }
+            @media @tablet {
+                font-size: 4.2vw;
+            }
+            @media @medium {
+                font-size: 8vw;
+                margin-bottom: 2%;
+            }
+        }
+        h3 {
+            font-size: 2.5vw;
+            @media @big {
+                font-size: 3vw;
+            }
+            @media @tablet {
+                font-size: 3.3vw;
+            }
+            @media @medium {
+                font-size: 6vw;
+            }
+        }
+        p {
+            font-size: 2vw;
+            color: #191414;
+            font-weight: 850;
+            color: white;
+            text-align: left;
+            @media @big {
+                font-size: 2.2vw;
+            }
+            @media @tablet {
+                font-size: 2.5vw;
+            }
+            @media @medium {
+                font-size: 4.5vw;
+                margin-top: 2%;
+            }
+        }
+        a {
+            margin-top: 5%;
+            font-size: 2.5vw;
+            .customButton(@bg-color: #1DB954; @width: 12vw; @font-color: #191414);
+            @media @big {
+                height: 5%;
+                font-size: 3vw;
+                width: 15vw;
+            }
+            @media @medium {
+                font-size: 5vw;
+                width: 25vw;
+            }
+        }
+    }//closes div
+    @media @big {
+        margin-top: -4%;
+    }
+    @media @medium {
+        flex-direction: column;
+    }
+}//closes .firstSlide
+.secondSlide {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+    color: #1DB954;
+    background: #1DB954;
+    margin: 11% auto;
+    padding: 10%;
+    border-top: 10px solid #101010;
+    border-bottom: 10px solid #101010;
+    .secondSlideImg {
+        width: 40vw;
+        padding: 0%;
+        box-shadow: 1.2vw 1.9vw #191414;
+        img {
+            box-shadow: .7vw .9vw black;
+            @media @medium {
+                box-shadow: 1.6vw 1.9vw black;
+            }
+        }
+        @media @medium {
+            width: 70vw;
+            margin-bottom: 5%;
+            box-shadow: 3vw 4vw #191414;
+        }
+    }//closes .secondSlideImg
+    div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        margin-left: -5%;
+        line-height: 6vw;
+        height: 50%;
+        padding: 2.5%;
+        h2 {
+            font-size: 3.5vw;
+            color: #191414;
+            text-shadow: .1vw .125vw #383838;
+            @media @big {
+                font-size: 4.2vw;
+            }
+            @media @tablet {
+                font-size: 4.5vw;
+            }
+            @media @medium {
+                font-size: 8vw;
+                margin-left: -18%;
+            }
+        }
+        h3 {
+            font-size: 2.5vw;
+            color: #191414;
+            text-shadow: .1vw .125vw #383838;
+            @media @big {
+                font-size: 3.2vw;
+            }
+            @media @tablet {
+                font-size: 3.5vw;
+            }
+            @media @medium {
+                font-size: 6vw;
+                margin-left: -18%;
+            }
+        }
+        p {
+            font-size: 2vw;
+            color: black;
+            font-weight: 850;
+            text-align: left;
+            @media @big {
+                font-size: 2.5vw;
+            }
+            @media @tablet {
+                font-size: 2.8vw;
+            }  
+            @media @medium {
+                font-size: 4.5vw;
+                margin-top: 2%;
+                font-weight: 1000%;
+                margin-left: -18%;
+                line-height: 4.5vw;
+                text-shadow: .125vw .2vw #383838;
+            }
+        }
+    }//closes div
+    @media @medium {
+        flex-direction: column;   
+    }
+}//closes .secondSlide
+.thirdSlide {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: #1DB954;
+    background: #191414;
+    margin: 5% auto;
+    .thirdSlideImg {
+        width: 40vw;
+        padding: 0%;
+        box-shadow: 1.2vw 1.9vw lightgreen;
+        img {
+            box-shadow: .7vw .9vw #1DB954;
+            @media @medium {
+                box-shadow: 1.6vw 1.9vw #1DB954;
+            }
+        }
+        @media @medium {
+            width: 70vw;
+            margin-bottom: 5%;
+            box-shadow: 3vw 4vw lightgreen;
+        }
+    }//closes .thirdSlideImg
+    div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        margin-left: -5%;
+        line-height: 5vw;
+        height: 50%;
+        padding: 2.5%;
+        h2 {
+            font-size: 3.5vw;
+            @media @big {
+                font-size: 4vw;
+            }
+            @media @tablet {
+                font-size: 4.5vw;
+            }
+            @media @medium {
+                font-size: 8vw;
+                margin-bottom: 2%;
+            }
+        }
+        h3 {
+            font-size: 2.5vw;
+            @media @big {
+                font-size: 3vw;
+            }
+            @media @tablet {
+                font-size: 3.3vw;
+            }
+            @media @medium {
+                font-size: 6vw;
+            }
+        }
+        p {
+            font-size: 2vw;
+            color: #191414;
+            font-weight: 850;
+            color: white;
+            text-align: left;
+            @media @big {
+                font-size: 2.5vw;
+            }
+            @media @tablet {
+                font-size: 2.8vw;
+            }
+            @media @medium {
+                font-size: 4.5vw;
+                margin-top: 2%;
+            }
+        }
+        a {
+            margin-top: 5%;
+            font-size: 2.5vw;
+            .customButton(@bg-color: #1DB954; @width: 12vw; @font-color: #191414);
+            @media @big {
+                height: 5%;
+                font-size: 3vw;
+                width: 15vw;
+            }
+            @media @medium {
+                font-size: 5vw;
+                width: 25vw;
+            }
+        }
+    }//closes div
+    @media @medium {
+        flex-direction: column;              
+    }
+}//closes .thirdSlide
+.fourthSlide {
+    background-image: url(../img/picThree.jpg); /* The image used */
+    background-color: #cccccc; /* Used if the image is unavailable */
+    height: 65vh; /* You must set a specified height */
+    width: 80vw;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #1DB954;
+    margin: 15% auto;
+    padding: 2.5%;
+    border-bottom: 1vw solid #1DB954;
+    border-left: 1.3vw solid #1DB954;
+    box-shadow: -1vw 1.6vw lightgreen;    
+    .fourthSlideImg {  
+        h2 {
+            font-size: 3.5vw;
+            color: #191414; 
+            text-shadow: .1vw .1vw black;
+            @media @big {
+                font-size: 3.8vw;
+            }
+            @media @tablet {
+                font-size: 4.3vw;
+            }
+            @media @medium {
+                font-size: 6vw;
+                text-shadow: .2vw .2vw black;
+            }
+        }
+        p {
+            font-size: 2vw;
+            color: #191414;
+            font-weight: 850;
+            color: white;
+            margin-bottom:5%;
+            text-shadow: .1vw .1vw black;
+            @media @big {
+                font-size: 2.3vw;
+            }
+            @media @tablet {
+                font-size: 2.8vw;
+            }
+            @media @medium {
+                font-size: 3.5vw;
+                text-shadow: .3vw .3vw black;
+            }
+        }
+        a {
+            font-size: 2.5vw;
+            .customButton(@bg-color: #1DB954; @width: 12vw; @font-color: #191414);
+            box-shadow: .2vw .2vw #191414;
+            @media @medium {
+                font-size: 4vw;
+                width: 22vw;
+                box-shadow: .8vw .8vw #191414;
+            }
+        }
+    }//closes .fourthSlideImg
+    @media @big {
+        height: 50vh;
+    }
+    @media @tablet {
+        height: 40vh;   
+    }
+    @media @medium {
+        width: 90vw;
+        height: 55vw;
     }
 }
